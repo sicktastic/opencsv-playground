@@ -41,6 +41,9 @@ img = cv2.imread('1_opencv.jpg')
 ## GOAL ##
 ##########
 
+# NOTE: It doesn't seem like you can change the apeture in OpenCV
+# NOTE: Apeture settings are probably only during the actual photo shoot
+
 # Write example
 
 # 1. Change the image apeture +1

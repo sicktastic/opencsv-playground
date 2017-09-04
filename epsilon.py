@@ -1,11 +1,14 @@
 import numpy as np
 import cv2
+import time
 from matplotlib import pyplot as plt
 
 ### EXAMPLES ###
 
 # Load in gray scale
 img = cv2.imread('1_opencv.jpg')
+
+# Show image
 # cv2.namedWindow('image', cv2.WINDOW_NORMAL)
 # cv2.imshow('1_opencv.jpg', img)
 # cv2.waitKey(0)
@@ -30,8 +33,9 @@ img = cv2.imread('1_opencv.jpg')
 # blue = img[100, 100, 0]
 # print (blue)
 
-print (img.shape)
-print (img.size)
+# Accessing info
+# print (img.shape)
+# print (img.size)
 
 ##########
 ## GOAL ##
@@ -41,6 +45,7 @@ print (img.size)
 
 # 1. Change the image apeture +1
     # a. Export to JPG
+cv2.imwrite('exports/apeture_1.jpg', img, [int(cv2.IMWRITE_JPEG_QUALITY), 90])
     # b. Export to PNG
 
 #2. Change the image apeture +2

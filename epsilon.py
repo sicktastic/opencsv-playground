@@ -41,24 +41,24 @@ img = cv2.imread('1_opencv.jpg')
 ## GOAL ##
 ##########
 
-# NOTE: It doesn't seem like you can change the apeture in OpenCV
-# NOTE: Apeture settings are probably only during the actual photo shoot
+# NOTE: It doesn't seem like you can change the aperture in OpenCV
+# NOTE: Aperture settings are probably only during the actual photo shoot
 
 # Write example
 
-# 1. Change the image apeture +1
+# 1. Change the image aperture +1
 # a. Export to JPG
 cv2.imwrite('exports/aperture_plus_1.jpg', img, [int(cv2.IMWRITE_JPEG_QUALITY), 90])
 # b. Export to PNG
 cv2.imwrite('exports/aperture_plus_1.png', img, [cv2.IMWRITE_PNG_COMPRESSION, 9])
 
-#2. Change the image apeture +2
+#2. Change the image aperture +2
 # a. Export to JPG
 cv2.imwrite('exports/aperture_plus_2.jpg', img, [int(cv2.IMWRITE_JPEG_QUALITY), 90])
 # b. Export to PNG
 cv2.imwrite('exports/aperture_plus_2.png', img)
 
-#3. Change the image apeture -1
+#3. Change the image aperture -1
 # a. Export to JPG
 cv2.imwrite('exports/aperture_minus_1.jpg', img, [int(cv2.IMWRITE_JPEG_QUALITY), 90])
 # b. Export to PNG

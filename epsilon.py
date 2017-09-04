@@ -44,25 +44,25 @@ img = cv2.imread('1_opencv.jpg')
 # Write example
 
 # 1. Change the image apeture +1
-    # a. Export to JPG
+# a. Export to JPG
 cv2.imwrite('exports/aperture_plus_1.jpg', img, [int(cv2.IMWRITE_JPEG_QUALITY), 90])
+# b. Export to PNG
 cv2.imwrite('exports/aperture_plus_1.png', img, [cv2.IMWRITE_PNG_COMPRESSION, 9])
-    # b. Export to PNG
 
 #2. Change the image apeture +2
-    # a. Export to JPG
+# a. Export to JPG
 cv2.imwrite('exports/aperture_plus_2.jpg', img, [int(cv2.IMWRITE_JPEG_QUALITY), 90])
+# b. Export to PNG
 cv2.imwrite('exports/aperture_plus_2.png', img)
-    # b. Export to PNG
 
 #3. Change the image apeture -1
-    # a. Export to JPG
+# a. Export to JPG
 cv2.imwrite('exports/aperture_minus_1.jpg', img, [int(cv2.IMWRITE_JPEG_QUALITY), 90])
+# b. Export to PNG
 cv2.imwrite('exports/aperture_minus_1.png', img)
-    # b. Export to PNG
 
 #4. Change the image apeture -2
-    # a. Export to JPG
+# a. Export to JPG
 cv2.imwrite('exports/aperture_minus_2.jpg', img, [int(cv2.IMWRITE_JPEG_QUALITY), 90])
+# b. Export to PNG
 cv2.imwrite('exports/aperture_minus_2.png', img)
-    # b. Export to PNG

@@ -1,4 +1,5 @@
 import numpy
 import cv2
 
-print (cv2.__version__)
+# load in gray scale
+source_image = cv2.imread('1_opencv.jpg', 0)

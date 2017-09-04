@@ -50,6 +50,7 @@ cv2.imwrite('exports/aperture_plus_1.jpg', img, [int(cv2.IMWRITE_JPEG_QUALITY), 
 
 #2. Change the image apeture +2
     # a. Export to JPG
+cv2.imwrite('exports/aperture_plus_2.jpg', img, [int(cv2.IMWRITE_JPEG_QUALITY), 10])
     # b. Export to PNG
 
 #3. Change the image apeture -1

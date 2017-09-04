@@ -12,14 +12,19 @@ img = cv2.imread('1_opencv.jpg', 0)
 # cv2.destroyAllWindows()
 
 # Display with Matplotlib
-plt.imshow(img, cmap = 'gray', interpolation = 'bicubic')
-plt.xticks([]), plt.yticks([])  # to hide tick values on X and Y axis
-plt.show()
+# plt.imshow(img, cmap = 'gray', interpolation = 'bicubic')
+# plt.xticks([]), plt.yticks([])  # to hide tick values on X and Y axis
+# plt.show()
 
 # Writes gray scale image load
-cv2.imwrite('1_opencv_gray.jpg', 0)
-cv2.destroyAllWindows()
+# cv2.imwrite('1_opencv_gray.jpg', 0)
+# cv2.destroyAllWindows()
 
+# Merge gray scale image with color and export
+img2 = cv2.imread('1_opencv_gray.jpg')
+dst = cv2.addWeighted(img, 0.7, img2, 0.3, 0)
+cv2.imshow('dst', dst)
+cv2.destroyAllWindows()
 
 ##########
 ## GOAL ##

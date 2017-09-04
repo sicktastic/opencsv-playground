@@ -30,6 +30,9 @@ img = cv2.imread('1_opencv.jpg')
 # blue = img[100, 100, 0]
 # print (blue)
 
+print (img.shape)
+print (img.size)
+
 ##########
 ## GOAL ##
 ##########
@@ -51,5 +54,3 @@ img = cv2.imread('1_opencv.jpg')
 #4. Change the image apeture -2
     # a. Export to JPG
     # b. Export to PNG
-
-

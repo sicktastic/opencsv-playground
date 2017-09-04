@@ -1,5 +1,5 @@
-import numpy as np
 import cv2
+import numpy as np
 import time
 from matplotlib import pyplot as plt
 

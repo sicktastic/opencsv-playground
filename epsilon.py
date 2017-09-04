@@ -2,7 +2,9 @@ import numpy as np
 import cv2
 from matplotlib import pyplot as plt
 
-# load in gray scale
+### EXAMPLES ###
+
+# Load in gray scale
 img = cv2.imread('1_opencv.jpg', 0)
 # cv2.namedWindow('image', cv2.WINDOW_NORMAL)
 # cv2.imshow('1_opencv.jpg', img)
@@ -13,6 +15,17 @@ img = cv2.imread('1_opencv.jpg', 0)
 plt.imshow(img, cmap = 'gray', interpolation = 'bicubic')
 plt.xticks([]), plt.yticks([])  # to hide tick values on X and Y axis
 plt.show()
+
+# Writes gray scale image load
+cv2.imwrite('1_opencv_gray.jpg', 0)
+cv2.destroyAllWindows()
+
+
+##########
+## GOAL ##
+##########
+
+# Write example
 
 # 1. Change the image apeture +1
     # a. Export to JPG

@@ -5,7 +5,7 @@ from matplotlib import pyplot as plt
 ### EXAMPLES ###
 
 # Load in gray scale
-img = cv2.imread('1_opencv.jpg', 0)
+img = cv2.imread('1_opencv.jpg')
 # cv2.namedWindow('image', cv2.WINDOW_NORMAL)
 # cv2.imshow('1_opencv.jpg', img)
 # cv2.waitKey(0)
@@ -20,11 +20,15 @@ img = cv2.imread('1_opencv.jpg', 0)
 # cv2.imwrite('1_opencv_gray.jpg', 0)
 # cv2.destroyAllWindows()
 
-# Merge gray scale image with color and export
-img2 = cv2.imread('1_opencv_gray.jpg')
-dst = cv2.addWeighted(img, 0.7, img2, 0.3, 0)
-cv2.imshow('dst', dst)
-cv2.destroyAllWindows()
+# Merge gray scale image with color and export, it needs to be same dimension
+# img2 = cv2.imread('1_opencv_gray.jpg')
+# dst = cv2.addWeighted(img, 0.7, img2, 0.3, 0)
+# cv2.imshow('dst', dst)
+# cv2.destroyAllWindows()
+
+# Accessing only blue pixel
+# blue = img[100, 100, 0]
+# print (blue)
 
 ##########
 ## GOAL ##

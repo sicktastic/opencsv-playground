@@ -46,7 +46,7 @@ img = cv2.imread('1_opencv.jpg')
 # 1. Change the image apeture +1
     # a. Export to JPG
 cv2.imwrite('exports/aperture_plus_1.jpg', img, [int(cv2.IMWRITE_JPEG_QUALITY), 90])
-cv2.imwrite('exports/aperture_plus_1.png', img)
+cv2.imwrite('exports/aperture_plus_1.png', img, [cv2.IMWRITE_PNG_COMPRESSION, 9])
     # b. Export to PNG
 
 #2. Change the image apeture +2

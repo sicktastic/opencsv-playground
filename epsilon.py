@@ -6,7 +6,7 @@ from matplotlib import pyplot as plt
 ### EXAMPLES ###
 
 # Load in gray scale
-img = cv2.imread('1_opencv.jpg')
+img = cv2.imread('1_opencv.jpg', 0)
 
 # Show image
 # cv2.namedWindow('image', cv2.WINDOW_NORMAL)
@@ -41,10 +41,18 @@ img = cv2.imread('1_opencv.jpg')
 ## GOAL ##
 ##########
 
-# NOTE: It doesn't seem like you can change the aperture in OpenCV
-# NOTE: Aperture settings are probably only during the actual photo shoot
+# NOTE # It doesn't seem like you can change the aperture in OpenCV
+# NOTE # Aperture settings are probably only during the actual photo shoot
+# NOTE # Try Histograms Equalization in OpenCV
 
 # Write example
+
+# Aperture settings are not in OpenCV (at least from my research),
+# Try using Histograms examples
+
+equ = cv2.equalizeHist(img)
+res = np.hstack((img, equ))
+cv2.imwrite('exports/equalize_opencv.png', res)
 
 # 1. Change the image aperture +1
 # a. Export to JPG

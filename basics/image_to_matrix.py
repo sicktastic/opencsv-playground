@@ -1,14 +1,20 @@
 import numpy as np
+import scipy as sp
+import scipy.signal
 import cv2
 
-IMAGE = cv2.imread('sample_images/anthonylee.jpg', 1)
+def generating_kernel(a):
+  w_1d = np.array([0.25 - a/2.0, 0.25, a, 0.25, 0.25 - a/2.0])
+  return np.outer(w_1d, w_1d)
 
-# Show image
-# cv2.imshow('sample_images/anthonylee.jpg', img)
-# cv2.waitKey(0)
-# cv2.destroyAllWindows()
+image = cv2.imread('sample_images/anthonylee.jpg', 1)
+image = np.float64(image)
+image = image[5:-5, 5:-5]
+kernel = generating_kernel(0.4)
+kernel = np.float64(kernel)
 
-image_to_matrix = np.float64(IMAGE)
-# print(image_to_matrix)
-# print(image_to_matrix[range(1, 10)])
-print("There are", len(image_to_matrix), "matrices here.")
+outimage = scipy.signal.convolve2d(image,kernel,'same')
+
+print(kernel)
+print("------------------")
+print(image)

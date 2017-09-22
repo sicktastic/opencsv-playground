@@ -90,9 +90,9 @@ def collapse(lapl_pyr):
 
 def main():
 
- image1 = cv2.imread('c:/apple.jpg')
- image2 = cv2.imread('c:/orange.jpg')
- mask = cv2.imread('c:/mask512.jpg')
+ image1 = cv2.imread('images/steve_jobs_old.jpg')
+ image2 = cv2.imread('images/steve_jobs_young.jpg')
+ mask = cv2.imread('images/mask.jpg')
  r1= None
  g1= None
  b1= None

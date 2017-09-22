@@ -1,8 +1,8 @@
 import cv2
 import numpy as np,sys
 
-A = cv2.imread('apple.jpg')
-B = cv2.imread('orange.jpg')
+A = cv2.imread('pyramid_blending/images/steve_jobs_young.jpg')
+B = cv2.imread('pyramid_blending/images/steve_jobs_young.jpg')
 
 # generate Gaussian pyramid for A
 G = A.copy()
@@ -48,5 +48,5 @@ for i in xrange(1,6):
 # image with direct connecting each half
 real = np.hstack((A[:,:cols/2],B[:,cols/2:]))
 
-cv2.imwrite('Pyramid_blending2.jpg',ls_)
-cv2.imwrite('Direct_blending.jpg',real)
+cv2.imwrite('pyramid_blending/output/Pyramid_blending2.jpg',ls_)
+cv2.imwrite('pyramid_blending/output/Direct_blending.jpg',real)

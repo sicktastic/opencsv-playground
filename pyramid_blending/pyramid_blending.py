@@ -1,8 +1,8 @@
 import cv2
 import numpy as np,sys
 
-A = cv2.imread('pyramid_blending/images/dv.jpg')
-B = cv2.imread('pyramid_blending/images/st.jpg')
+A = cv2.imread('pyramid_blending/images/steve_jobs_old.jpg')
+B = cv2.imread('pyramid_blending/images/steve_jobs_young.jpg')
 
 # generate Gaussian pyramid for A
 G = A.copy()

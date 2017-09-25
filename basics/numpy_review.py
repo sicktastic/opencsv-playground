@@ -1,5 +1,7 @@
 import numpy as np
 
-// linespace, zero, ones, datatypes
+# linspace, zero, ones, datatypes
 
-print(np.linspace[5, 15, 9])
+my_linspace = np.linspace(5,15,9)
+
+print(my_linspace)

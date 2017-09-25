@@ -13,7 +13,7 @@ image = image[5:-5, 5:-5]
 kernel = generating_kernel(0.4)
 kernel = np.float64(kernel)
 
-outimage = scipy.signal.convolve2d(image,kernel,'same')
+outimage = scipy.signal.convolve2d(kernel,kernel,'same')
 
 print(kernel)
 print("------------------")

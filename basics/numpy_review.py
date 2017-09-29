@@ -20,9 +20,8 @@ import numpy as np
 # column = 2
 # print(my_array[row, column])
 
-# 3d array
-# my_array = np.arange(70)
-# my_array.shape = (2, 7, 5)
-# print(my_array[1])
-# print(my_array[1, 3])
-# print(my_array[1, 3, 2])
+my_array = np.arange(70)
+my_array.shape = (2, 7, 5)
+print(my_array[1])
+print(my_array[1, 3])
+print(my_array[1, 3, 2])

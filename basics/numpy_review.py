@@ -26,3 +26,9 @@ import numpy as np
 # print(my_array[1])
 # print(my_array[1, 3])
 # print(my_array[1, 3, 2])
+
+my_array = np.arange(100)
+my_array.shape = (2, 10, 5)
+zeros = np.zeros([5,5])
+print(my_array)
+print(my_array[::1, ::3])

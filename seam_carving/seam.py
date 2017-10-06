@@ -9,4 +9,3 @@ sobel_y = cv2.Sobel(img,cv2.CV_64F,0,1,ksize=5)
 print(np.float64(img[0]))
 print("==========================")
 print(sobel_x[0])
-

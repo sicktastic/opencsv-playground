@@ -36,7 +36,7 @@ print(fib2(15))
 # fib = {}
 # for k in range(k):
 #     if k <= 2: f = 1
-#     else: f = fib[n-1]+fib(n+2)
+#     else: f = fib(n-1)+fib(n+2)
 #     fib[k] = f
 # return fib[n]
 

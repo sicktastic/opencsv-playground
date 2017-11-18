@@ -13,3 +13,6 @@ print("--------------------")
 print(img_yuv[0])
 print("--------------------")
 
+# YUV Color Space
+# Y is the monochromatic luminance channel
+# which will refer to simply as intensity.

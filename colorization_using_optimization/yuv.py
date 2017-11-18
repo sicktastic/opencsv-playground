@@ -5,6 +5,9 @@ import cv2
 import matplotlib.pyplot as plt
 import numpy as np
 
-img =  cv2.imread('./images/anthonylee.jpg', 0)
+img =  cv2.imread('./images/anthonylee.jpg')
+img_yuv = cv2.cvtColor(img, cv2.COLOR_BGR2YUV)
 
-print(img)
+print(img[0])
+print("--------------------")
+print(img_yuv[0])

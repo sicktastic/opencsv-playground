@@ -9,8 +9,14 @@ img =  cv2.imread('./images/anthonylee.jpg')
 img_yuv = cv2.cvtColor(img, cv2.COLOR_BGR2YUV)
 
 print(img[0])
+print(img[0][0])
+print(img[0][1])
+print(img[0][2])
 print("--------------------")
 print(img_yuv[0])
+print(img_yuv[0][0])
+print(img_yuv[0][1])
+print(img_yuv[0][2])
 print("--------------------")
 
 # YUV Color Space

@@ -6,18 +6,31 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 img =  cv2.imread('./images/anthonylee.jpg')
+b,g,r = cv2.split(img)
+
 img_yuv = cv2.cvtColor(img, cv2.COLOR_BGR2YUV)
 
+img_rgb = cv2.merge([r,g,b])
+
+print("1. BRG  --------------------")
 print(img[0])
 print(img[0][0])
 print(img[0][1])
 print(img[0][2])
-print("--------------------")
+print("2. YUV --------------------")
 print(img_yuv[0])
 print(img_yuv[0][0])
 print(img_yuv[0][1])
 print(img_yuv[0][2])
-print("--------------------")
+print("3. RGB--------------------")
+print(img_rgb[0])
+print(img_rgb[0][0])
+print(img_rgb[0][1])
+print(img_rgb[0][2])
+print("4. Shape--------------------")
+print("Image BRG Shape:", img.shape)
+print("Image YUV Shape:", img_yuv.shape)
+print("Image RGB Shape:", img_rgb.shape)
 
 # YUV Color Space
 # Y is the monochromatic luminance channel

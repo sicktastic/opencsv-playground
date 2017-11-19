@@ -2,8 +2,12 @@
 # http://www.cs.huji.ac.il/~yweiss/Colorization/
 
 import cv2
+import math
 import matplotlib.pyplot as plt
 import numpy as np
+from scipy import sparse
+from scipy.sparse.linalg import spsolve
+from scipy.sparse.linalg import lsqr
 
 img =  cv2.imread('./images/anthonylee.jpg')
 b,g,r = cv2.split(img)

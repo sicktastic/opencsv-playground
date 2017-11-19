@@ -15,4 +15,14 @@ print("--------------------")
 
 # YUV Color Space
 # Y is the monochromatic luminance channel
-# which will refer to simply as intensity.
+# which will refer to simply as intensity,
+# while U and V are the chrominance channels,
+# encoding the color.
+
+# calculate weights of neighbors
+
+# w_rs = e^{-(Y(s)-Y(r))^2 / 2\sigma_r^2}
+
+# where r is the index of the center, s the index of a neighbour and
+
+# sigma_r is the variance in a neighbourhood around r.

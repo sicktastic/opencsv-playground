@@ -5,7 +5,6 @@
 
 import cv2
 import math
-import matplotlib.pyplot as plt
 import numpy as np
 from scipy import sparse
 from scipy.sparse.linalg import spsolve
@@ -32,21 +31,3 @@ print("Image BRG Shape:", img.shape)
 print("Image YUV Shape:", img_yuv.shape)
 print("Image RGB Shape:", img_rgb.shape)
 print("Image Gray Shape:", img_rgb.shape)
-
-# Helper functions to convert from RGB color space to YIQ color space and vice-versa.
-
-# Values for conversion matrices taken from http://en.wikipedia.org/wiki/YIQ#Formulas
-
-# YUV Color Space
-# Y is the monochromatic luminance channel
-# which will refer to simply as intensity,
-# while U and V are the chrominance channels,
-# encoding the color.
-
-# calculate weights of neighbors
-
-# w_rs = e^{-(Y(s)-Y(r))^2 / 2\sigma_r^2}
-
-# where r is the index of the center, s the index of a neighbour and
-
-# sigma_r is the variance in a neighbourhood around r.

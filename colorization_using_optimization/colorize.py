@@ -12,6 +12,8 @@ marked =  cv2.imread('./images/marked.bmp')
 
 yuv = cv2.cvtColor(marked, cv2.COLOR_BGR2YUV)
 
-print(bw[0][1])
-print(marked[0][1])
-print(yuv[0][1])
+y = yuv[:,:,0]
+u = yuv[:,:,1]
+v = yuv[:,:,2]
+
+print(y[0,1], u[0,1], v[0,1])

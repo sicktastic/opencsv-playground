@@ -19,3 +19,5 @@ marked = marked.astype(np.float32) / 255
 
 # from matlab code colorize.m
 # max_d = np.floor(np.log(min(yuv.shape[0],yuv.shape[1]))/np.log(2)-2)
+
+# moved this to private repo on 11/26/2017 11:23:00

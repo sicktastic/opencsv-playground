@@ -10,6 +10,8 @@ from scipy.sparse.linalg import lsqr
 bw =  cv2.imread('./images/bw.bmp')
 marked =  cv2.imread('./images/marked.bmp')
 
-yuv = cv2.cvtColor(bw, cv2.COLOR_BRG2YUV)
+yuv = cv2.cvtColor(marked, cv2.COLOR_BGR2YUV)
 
-print(yuv[0])
+print(bw[0][1])
+print(marked[0][1])
+print(yuv[0][1])

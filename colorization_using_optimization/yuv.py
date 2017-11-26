@@ -1,33 +1,29 @@
-# Paper from:
-# http://www.cs.huji.ac.il/~yweiss/Colorization/
-# Python example from:
-# https://github.com/godfatherofpolka/ColorizationUsingOptimizationInPython
-
 import cv2
-import math
 import numpy as np
-from scipy import sparse
-from scipy.sparse.linalg import spsolve
-from scipy.sparse.linalg import lsqr
 
-img =  cv2.imread('./images/gray.png')
-img =  cv2.imread('./images/marked.png')
-img =  cv2.imread('./images/original.png')
-b,g,r = cv2.split(img)
+
+def make_lut_u():
+    return np.array([[[i,255-i,0] for i in range(256)]],dtype=np.uint8)
+
+def make_lut_v():
+    return np.array([[[0,255-i,i] for i in range(256)]],dtype=np.uint8)
+
+
+img = cv2.imread('./images/anthonylee.jpg')
+
 img_yuv = cv2.cvtColor(img, cv2.COLOR_BGR2YUV)
-img_rgb = cv2.merge([r,g,b])
-img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+y, u, v = cv2.split(img_yuv)
 
-print("1. BRG  --------------------")
-print(img[0, :5])
-print("2. YUV --------------------")
-print(img_yuv[0, :5])
-print("3. RGB --------------------")
-print(img_rgb[0, :5])
-print("4. Gray -------------------")
-print(img_rgb[0, :5])
-print("5. Shape -------------------")
-print("Image BRG Shape:", img.shape)
-print("Image YUV Shape:", img_yuv.shape)
-print("Image RGB Shape:", img_rgb.shape)
-print("Image Gray Shape:", img_rgb.shape)
+lut_u, lut_v = make_lut_u(), make_lut_v()
+
+# Convert back to BGR so we can apply the LUT and stack the images
+y = cv2.cvtColor(y, cv2.COLOR_GRAY2BGR)
+u = cv2.cvtColor(u, cv2.COLOR_GRAY2BGR)
+v = cv2.cvtColor(v, cv2.COLOR_GRAY2BGR)
+
+u_mapped = cv2.LUT(u, lut_u)
+v_mapped = cv2.LUT(v, lut_v)
+
+result = np.vstack([img, y, u_mapped, v_mapped])
+
+cv2.imwrite('./images/anthonylee_yuv.png', result)

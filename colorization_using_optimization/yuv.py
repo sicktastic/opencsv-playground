@@ -11,8 +11,8 @@ from scipy.sparse.linalg import spsolve
 from scipy.sparse.linalg import lsqr
 
 img =  cv2.imread('./images/gray.png')
-# img =  cv2.imread('./images/marked.png')
-# img =  cv2.imread('./images/original.png')
+img =  cv2.imread('./images/marked.png')
+img =  cv2.imread('./images/original.png')
 b,g,r = cv2.split(img)
 img_yuv = cv2.cvtColor(img, cv2.COLOR_BGR2YUV)
 img_rgb = cv2.merge([r,g,b])

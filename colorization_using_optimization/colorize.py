@@ -16,4 +16,7 @@ y = yuv[:,:,0]
 u = yuv[:,:,1]
 v = yuv[:,:,2]
 
-print(y[0,1], u[0,1], v[0,1])
+# print(y[0,1], u[0,1], v[0,1])
+
+# from matlab code colorize.m line 23
+max_d = np.floor(np.log(min(yuv.shape[0],yuv.shape[1]))/np.log(2)-2)
